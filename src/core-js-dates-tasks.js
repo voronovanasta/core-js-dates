@@ -231,16 +231,16 @@ function getCountWeekendsInMonth(month, year) {
  * Date(2023, 1, 1) => Date(2023, 9, 13)
  */
 function getNextFridayThe13th(date) {
-  if (date.getDay() === '5' && date.getDate() >= '13') {
+  if (date.getDay() === 5 && date.getDate() >= 13) {
     const current = date.getDate();
     date.setDate(current + 1);
   } else {
     date.setDate(13);
   }
 
-  if (date.getDay() === '5') return date;
+  if (date.getDay() === 5) return date;
 
-  while (date.getDay() !== '5') {
+  while (date.getDay() !== 5) {
     const newMonth = date.getMonth();
     date.setDate(13);
     date.setMonth(newMonth + 1);
